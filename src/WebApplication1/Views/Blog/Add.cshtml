@@ -1,0 +1,19 @@
+﻿@using Microsoft.AspNetCore.Mvc.Rendering
+@using WebApplication1.Entities
+@model WebApplication1.Models.Blog.BlogAddViewModel
+@using (Html.BeginForm())
+{
+    Html.AntiForgeryToken();
+    <div class="row">
+        <div class="col-md-4 col-md-offset-3">
+            <div class="form-group">
+                <label asp-for="Blog.Url"></label>
+               <input type="text" asp-for="Blog.Url" class="form-control"/>
+            </div>
+            <section class="form-buttons">
+                <button type="submit">Add Blog</button>
+            </section>
+        </div>
+        
+    </div>
+}
